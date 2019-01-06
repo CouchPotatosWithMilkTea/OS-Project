@@ -251,8 +251,8 @@ int main(int argc, char* argv[])
     }
 
     printf("\nAvaliable Enclaves");
-    printf("\nEnclave1 - EnclaveID %" PRIx64, e1_enclave_id);
-    printf("\nEnclave2 - EnclaveID %" PRIx64, e2_enclave_id);
+    printf("\nEnclave1:(ID Check Server Provider) EnclaveID %" PRIx64, e1_enclave_id);
+    printf("\nEnclave2:(Code Runner) - EnclaveID %" PRIx64, e2_enclave_id);
     
     status = Enclave1_test_create_session(e1_enclave_id, &ret_status, e1_enclave_id, e2_enclave_id);
 	if (status!=SGX_SUCCESS)
@@ -312,7 +312,7 @@ int main(int argc, char* argv[])
 		}
 	}
 
-    printf("\nChecked the ID of Enclave.");
+    printf("\nChecked the ID of Enclave2.");
     printf("\n需要输入几个工资？");
     scanf("%d",&total_number);
     
