@@ -253,14 +253,14 @@ int SGX_CDECL main(int argc, char *argv[])
     scanf("%d",&total_number);
     
     if(total_number > 0);
-    ecall_init_array();
+    ecall_init_array(global_eid);
 
     for(; ii < total_number; ++ ii) {
         printf("输入工资");
         scanf("%f",&tmp);
-        ecall_insert_number(tmp);
+        ecall_insert_number(global_eid,tmp);
     }
-    ecall_get_avg();
+    ecall_get_avg(global_eid);
  
     //printf_helloworld(global_eid);
 
