@@ -39,5 +39,14 @@ enclave {
             public uint32_t test_enclave_to_enclave_call(sgx_enclave_id_t src_enclave_id, sgx_enclave_id_t dest_enclave_id);
             public uint32_t test_message_exchange(sgx_enclave_id_t src_enclave_id, sgx_enclave_id_t dest_enclave_id);
             public uint32_t test_close_session(sgx_enclave_id_t src_enclave_id, sgx_enclave_id_t dest_enclave_id);
+            public void ecall_init_array();
+            public void ecall_insert_number();
+            public void ecall_get_avg();
+    };
+
+    untrusted {
+        void ocall_print_string([in, string] const char *str);
+        void ocall_print_ans( double ans);
+        double ocall_scan_d();
     };
 };

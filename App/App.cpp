@@ -316,14 +316,14 @@ int main(int argc, char* argv[])
     printf("\n需要输入几个工资？");
     scanf("%d",&total_number);
     
-    Enclave1_ecall_init_array( e1_enclave_id);
+    Enclave2_ecall_init_array( e1_enclave_id);
 
     for(; ii < total_number; ++ ii) {
         printf("\n输入工资");
         //scanf("%lf",&tmp);
-        Enclave1_ecall_insert_number( e1_enclave_id);
+        Enclave2_ecall_insert_number( e1_enclave_id);
     }
-    Enclave1_ecall_get_avg( e1_enclave_id);
+    Enclave2_ecall_get_avg( e1_enclave_id);
 
     sgx_destroy_enclave(e1_enclave_id);
     sgx_destroy_enclave(e2_enclave_id);
