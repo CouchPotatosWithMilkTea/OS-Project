@@ -61,17 +61,15 @@ void ecall_init_array(){
 
 void ecall_insert_number(double number){
     if( ps < 1024) {
+        s_array[ps] = number;
         ps += 1;
     }
-    s_array[ps] = number;
-    ocall_print_ans(s_array[ps]);
 }
 
 void ecall_get_avg(){
     double avg = 0;
     for(int i = 0; i < ps; ++i) {
         avg +=  s_array[i];
-        ocall_print_ans(avg);
     }
     avg = avg / ps;
     ocall_print_ans(avg);
