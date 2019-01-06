@@ -312,7 +312,7 @@ int main(int argc, char* argv[])
 		}
 	}
 
-    printf("\nChecked the ID of Enclave.")
+    printf("\nChecked the ID of Enclave.");
     printf("\n需要输入几个工资？");
     scanf("%d",&total_number);
     
