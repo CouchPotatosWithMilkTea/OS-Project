@@ -40,6 +40,7 @@
 #include "../Enclave2/Enclave2_u.h"
 #include "sgx_eid.h"
 #include "sgx_urts.h"
+#include "Enclave1.h"
 #define __STDC_FORMAT_MACROS
 #include <inttypes.h>
 #define UNUSED(val) (void)(val)
