@@ -61,7 +61,7 @@ void ecall_init_array(){
 
 void ecall_insert_number(){
     if( ps < 1024) {
-        s_array[ps] = ocall_scan_d();
+        ocall_scan_d(&s_array[ps])
         ps += 1;
     }
 }
