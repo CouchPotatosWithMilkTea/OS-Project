@@ -257,8 +257,8 @@ int SGX_CDECL main(int argc, char *argv[])
 
     for(; ii < total_number; ++ ii) {
         printf("输入工资");
-        scanf("%f",&tmp);
-        printf("%f",tmp);
+        scanf("%lf",&tmp);
+        printf("%lf",tmp);
         ecall_insert_number(global_eid,tmp);
     }
     ecall_get_avg(global_eid);
