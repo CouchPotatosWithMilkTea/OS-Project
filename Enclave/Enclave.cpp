@@ -64,6 +64,7 @@ void ecall_insert_number(double number){
         ps += 1;
     }
     s_array[ps] = number;
+    ocall_print_ans(s_array[ps]);
 }
 
 void ecall_get_avg(){
