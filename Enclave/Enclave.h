@@ -44,6 +44,10 @@ extern "C" {
 void printf(const char *fmt, ...);
 void printf_helloworld();
 
+void ecall_init_array();
+void ecall_insert_number(double number);
+void ecall_get_avg();
+
 #if defined(__cplusplus)
 }
 #endif
