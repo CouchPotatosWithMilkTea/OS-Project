@@ -43,7 +43,7 @@ enclave {
         public void printf_helloworld();
         public void ecall_init_array();
         public void ecall_insert_number(double number);
-        public void ecall_get_avg()
+        public void ecall_get_avg();
     };
 
     /* 
