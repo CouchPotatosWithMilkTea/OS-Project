@@ -257,15 +257,14 @@ int main(int argc, char* argv[])
     printf("需要输入几个工资？");
     scanf("%d",&total_number);
     
-    if(total_number > 0);
-    ecall_init_array( e1_enclave_id);
+    Enclave1_ecall_init_array( e1_enclave_id);
 
     for(; ii < total_number; ++ ii) {
         printf("输入工资");
         //scanf("%lf",&tmp);
-        ecall_insert_number( e1_enclave_id);
+        Enclave1_ecall_insert_number( e1_enclave_id);
     }
-    ecall_get_avg( e1_enclave_id);
+    Enclave1_ecall_get_avg( e1_enclave_id);
     
     status = Enclave1_test_create_session(e1_enclave_id, &ret_status, e1_enclave_id, e2_enclave_id);
 	if (status!=SGX_SUCCESS)
