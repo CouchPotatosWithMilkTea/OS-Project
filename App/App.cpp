@@ -236,6 +236,10 @@ int main(int argc, char* argv[])
     
     sgx_status_t ret;
 
+    int total_number = 0;
+    int ii = 0;
+    double tmp;
+
     (void)(argc);
     (void)(argv);
 	
