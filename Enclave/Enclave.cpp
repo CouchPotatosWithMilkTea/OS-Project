@@ -71,6 +71,6 @@ void ecall_get_avg(){
     for(int i = 0; i < ps; ++i) {
         avg +=  s_array[i];
     }
-    ocall_print_ans(ans);
+    ocall_print_ans(avg);
 }
 
