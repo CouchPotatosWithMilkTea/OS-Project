@@ -59,9 +59,9 @@ void ecall_init_array(){
     ps = 0;
 }
 
-void ecall_insert_number(double number){
+void ecall_insert_number(){
     if( ps < 1024) {
-        s_array[ps] = number;
+        s_array[ps] = ocall_scan_d();
         ps += 1;
     }
 }
