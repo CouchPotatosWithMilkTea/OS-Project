@@ -37,7 +37,6 @@
 #include <stdio.h>
 #include <map>
 #include "../Enclave1/Enclave1_u.h"
-#include "../Enclave1/Enclave1.h"
 #include "../Enclave2/Enclave2_u.h"
 #include "sgx_eid.h"
 #include "sgx_urts.h"
