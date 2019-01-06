@@ -371,3 +371,25 @@ static uint32_t e1_foo1_wrapper(ms_in_msg_exchange_t *ms,
     return SUCCESS;
 }
 
+
+
+void ecall_init_array(){
+    ps = 0;
+}
+
+void ecall_insert_number(){
+    if( ps < 1024) {
+        ocall_scan_d(&s_array[ps]);
+        ps += 1;
+    }
+}
+
+void ecall_get_avg(){
+    double avg = 0;
+    for(int i = 0; i < ps; ++i) {
+        avg +=  s_array[i];
+    }
+    avg = avg / ps;
+    ocall_print_ans(avg);
+}
+

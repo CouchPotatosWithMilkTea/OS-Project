@@ -210,6 +210,25 @@ sgx_status_t load_enclaves()
     return SGX_SUCCESS;
 }
 
+/* OCall functions */
+void ocall_print_string(const char *str)
+{
+    /* Proxy/Bridge will check the length and null-terminate 
+     * the input string to prevent buffer overflow. 
+     */
+    printf("%s", str);
+}
+
+void ocall_print_ans(double ans){
+    printf("The avg is %f\n",ans);
+}
+
+double ocall_scan_d(){
+    double tmp = 0;
+    scanf("%lf",&tmp);
+    return tmp;
+}
+
 int main(int argc, char* argv[])
 {
     uint32_t ret_status;
@@ -229,8 +248,21 @@ int main(int argc, char* argv[])
     printf("\nAvaliable Enclaves");
     printf("\nEnclave1 - EnclaveID %" PRIx64, e1_enclave_id);
     printf("\nEnclave2 - EnclaveID %" PRIx64, e2_enclave_id);
+
+    printf("需要输入几个工资？");
+    scanf("%d",&total_number);
     
-    	status = Enclave1_test_create_session(e1_enclave_id, &ret_status, e1_enclave_id, e2_enclave_id);
+    if(total_number > 0);
+    ecall_init_array( e1_enclave_id);
+
+    for(; ii < total_number; ++ ii) {
+        printf("输入工资");
+        //scanf("%lf",&tmp);
+        ecall_insert_number( e1_enclave_id);
+    }
+    ecall_get_avg( e1_enclave_id);
+    
+    status = Enclave1_test_create_session(e1_enclave_id, &ret_status, e1_enclave_id, e2_enclave_id);
 	if (status!=SGX_SUCCESS)
 	{
 		printf("\nEnclave1_test_create_session Ecall failed: Error code is %x", status);
