@@ -38,6 +38,7 @@
 #include "Utility_E2.h"
 #include "sgx_thread.h"
 #include "sgx_dh.h"
+#include "mem.h"
 #include <map>
 
 #define UNUSED(val) (void)(val)
